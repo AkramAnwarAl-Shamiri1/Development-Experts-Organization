@@ -1,0 +1,927 @@
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> مؤسسة كايزن للتنمية </title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+   
+    nav {
+      display: flex;
+      justify-content: center;
+     
+      
+    }
+    nav a {
+      color: #003366;
+      padding: 0px 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+/* ===== Hero Slider ===== */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+  
+  /* كل سلايد يحصل على نفس الحركة لكن بتأخير مختلف */
+  animation: slideAnimation 16s infinite ease-in-out;
+}
+
+/* تأخير بدء الحركة لكل صورة */
+.hero-slide:nth-child(1) { animation-delay: 0s;  }
+.hero-slide:nth-child(2) { animation-delay: 4s;  }
+.hero-slide:nth-child(3) { animation-delay: 8s;  }
+.hero-slide:nth-child(4) { animation-delay: 12s; }
+
+/* محتوى النص فوق الصورة */
+.slide-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+}
+
+.slide-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+}
+
+/* Keyframes لتمرير الصور */
+@keyframes slideAnimation {
+  0%   { left: -100%; opacity: 0; }
+  6.25% { left:   0%; opacity: 1; }
+  18.75%{ left:   0%; opacity: 1; }
+  25%  { left: 100%; opacity: 0; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* استجابة للجوال */
+@media (max-width: 768px) {
+  .hero-slider { height: 400px; }
+  .slide-content h1 { font-size: 1.8rem; }
+  .slide-content p  { font-size: 1rem; }
+}
+
+/* ===== قسم الأحداث النشطة ===== */
+.active-events {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.active-events h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+/* شبكة البطاقات */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* تصميم البطاقة */
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 350px; /* ثابت لضبط النسب */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 70% للصورة */
+.card-image {
+  flex: 0 0 70%;
+  overflow: hidden;
+  position: relative;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card-image:hover img {
+  transform: scale(1.1);
+}
+
+/* 30% للنص */
+.card-text {
+  flex: 0 0 30%;
+  padding: 15px;
+  text-align: center;
+}
+.card-text h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #0077b6;
+}
+.card-text p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* استجابة للجوال */
+@media (max-width: 600px) {
+  .event-card {
+    height: 300px;
+  }
+  .card-text h3 {
+    font-size: 1rem;
+  }
+  .card-text p {
+    font-size: 0.85rem;
+  }
+}
+
+    .section {
+      padding: 20px 0px;
+      text-align: center;
+    }
+    .dropdown {
+      
+      border: 1px solid #0a0a0a;
+      margin: 10px auto;
+      width: 95%;
+      text-align: right;
+      cursor: pointer;
+      padding: 10px;
+      position: relative;
+      font-weight: bold;
+    }
+    .dropdown::after {
+      content: "⬇️";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .dropdown-content {
+      font-weight: 500;
+      display: none;
+      background: #ebe9e9;
+      padding: 10px 20px;
+      border-top: 1px solid #f0e8e8;
+    }
+/* ===== قسم البرامج ===== */
+.programs-section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.programs-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+/* شبكة البطاقات */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  perspective: 1000px; /* لتمكين الإحساس بالعمق */
+}
+
+/* تصميم البطاقة */
+.program-card {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+.program-card:hover {
+  transform: rotateY(180deg);
+}
+
+/* وجهي البطاقة */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* الواجهة الأمامية */
+.card-front {
+  background: #fff;
+}
+.card-front i {
+  color: #0096c7;
+  margin-bottom: 10px;
+}
+.card-front h3 {
+  color: #333;
+}
+
+/* الواجهة الخلفية */
+.card-back {
+  background: #0096c7;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+.more-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #ffdd00;
+  color: #333;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.more-btn:hover {
+  background: #e6c200;
+}
+
+/* استجابة للجوال */
+@media (max-width: 600px) {
+  .program-card {
+    height: 200px;
+  }
+  .card-front i {
+    font-size: 2rem !important;
+  }
+  .card-front h3,
+  .more-btn {
+    font-size: 0.9rem;
+  }
+}
+
+     .media, .partners {
+      margin: 20px auto;
+    }
+   
+  /* ===== قسم الأرقام والإحصائيات ===== */
+.stats-section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.stats-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+/* شبكة البطاقات */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* تصميم البطاقة */
+.stat-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0096c7;
+}
+
+.stat-label {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* استجابة للجوال */
+@media (max-width: 600px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0px 50px;
+    }
+    .partners-logos img {
+      width: 100px;
+      height: auto;
+    }
+  
+.nav-item {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+  text-align: right;
+}
+.dropdown-menu a {
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  color: #003366;
+}
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+.dropdown-parent:hover .dropdown-menu {
+  display: block;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: #003366;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.search-input {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+.search-form button {
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #002244;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.top-bar {
+  background-color: #003366;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 14px;
+}
+.social-icon {
+  color: white;
+  text-decoration: none;
+}
+.social-icon:hover {
+  text-decoration: underline;
+}
+
+.top-bar {
+  background-color: #003366;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  font-size: 20px;
+}
+.social-icon {
+  color: white;
+  text-decoration: none;
+}
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.top-bar {
+  background-color: #003366;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 18px;
+}
+.social-icon {
+  color: white;
+  text-decoration: none;
+}
+.social-icon:hover {
+  color: #ffcc00;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 2px solid #ccc;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  width: 50;
+  height: 50px;
+}
+/* ===== Footer ===== */
+.site-footer {
+  position: relative;
+  background-color: #00467a;
+  color: #fff;
+  font-size: 0.95rem;
+  direction: rtl;
+  overflow: hidden;
+  padding-top: 150px; /* مساحة كافية لظهور الموجات */
+}
+
+/* إضافة موجات الـ SVG كـ background عبر ::before */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 218px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1600 218'><path style='fill:rgba(0,70,122,0.25)' d='M-36,213.5L1605,0V228.5H-36v-15Z'/><path style='fill:rgba(0,70,122,0.5)' d='M-36,213.5L1605,32V228.5H-36v-15Z'/><path style='fill:%2300467a' d='M-36,212L1605,62V228H-36V212Z'/></svg>");
+  z-index: 0;
+}
+
+/* المحتوى الرئيسي للـ Footer فوق الخلفية */
+.footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer-logo img {
+  max-height: 80px;
+}
+
+/* بيانات الاتصال */
+.footer-info {
+  text-align: right;
+  line-height: 1.8;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info i {
+  margin-left: 8px;
+  color: #ffdd00;
+}
+
+/* الجزء السفلي */
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #00335a;
+}
+
+.footer-bottom hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-bottom: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* استجابة للجوال */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+}
+
+
+</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/></head>
+<body><div class="top-bar"><a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="social-icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:example@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></div>
+<header><div class="logo-section"><img alt="شعار المؤسسة" class="logo-img" src="akrasf.png"> </span></div><nav><a href="#">الرئيسية</a><div class="nav-item dropdown-parent"><a href="#">البرامج </a><div class="dropdown-menu"><a href="#">اتصل بنا</a><a href="#">اختيار اللغة</a></div></div><a href="#">أخبار</a><div class="nav-item dropdown-parent"><a href="#">خبراء </a><div class="dropdown-menu"><a href="#">اتصل </a><a href="#">اختيار اللغة</a></div></div><div class="nav-item dropdown-parent"><a href="#">ميديا</a><div class="dropdown-menu"><a href="#">اتصل بنا</a><a href="#">اختيار اللغة</a></div></div></nav><form class="search-form" onsubmit="return false;"><input class="search-input" placeholder="ابحث..." type="text"/><button type="submit">🔍</button></form></header>
+
+<!-- Hero Slider -->
+<section class="hero-slider">
+  <div class="hero-slide" style="background-image: url('images/hero1.jpg')">
+    <div class="slide-content">
+      <h1>تمكين الشباب</h1>
+      <p>مع مؤسسة كايزن نحو غد أفضل</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image: url('images/hero2.jpg')">
+    <div class="slide-content">
+      <h1>التعليم للجميع</h1>
+      <p>نؤمن بأنه حق أساسي لكل طفل</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image: url('images/hero3.jpg')">
+    <div class="slide-content">
+      <h1>رعاية صحية أفضل</h1>
+      <p>نبني مستقبل صحي وآمن</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image: url('images/hero4.jpg')">
+    <div class="slide-content">
+      <h1>حماية البيئة</h1>
+      <p>معًا لنحافظ على كوكبنا</p>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+<div class="dropdown">الرؤية
+      <div class="dropdown-content">تحقيق تنمية مستدامة وشاملة في اليمن من خلال تمكين المجتمعات.</div>
+</div>
+<div class="dropdown">الرسالة
+      <div class="dropdown-content">المساهمة في التنمية الاجتماعية والاقتصادية عبر مشاريع إنسانية وتدريبية.</div>
+</div>
+<div class="dropdown">القيم والمبادئ
+      <div class="dropdown-content">الشفافية، المشاركة، الاستدامة، الكفاءة، احترام الإنسان.</div>
+</div>
+<div class="dropdown">الأهداف
+      <div class="dropdown-content">تقديم الدعم للفئات الأكثر ضعفاً، تعزيز التعليم، تمكين المرأة والشباب.</div>
+</div>
+</div>
+
+<section class="programs-section">
+  <h2>برامج المؤسسة</h2>
+  <div class="programs-grid">
+    <!-- بطاقة نموذجية -->
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-apple-alt fa-3x"></i>
+        <h3>الصحة والتغذية</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/health.html">المزيد</button>
+      </div>
+    </div>
+    <!-- كرّر البطاقة 8 مرات مع تغيير الأيقونة والنص والرابط -->
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-book-reader fa-3x"></i>
+        <h3>التعليم</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/education.html">المزيد</button>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-home fa-3x"></i>
+        <h3>الماوى</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/shelter.html">المزيد</button>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-seedling fa-3x"></i>
+        <h3>البيئة والعمل المناخي</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/environment.html">المزيد</button>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-shield-alt fa-3x"></i>
+        <h3>السلامة والتنمية</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/safety.html">المزيد</button>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-lock fa-3x"></i>
+        <h3>الحماية</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/protection.html">المزيد</button>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-water fa-3x"></i>
+        <h3>المياه والإصحاح</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/water.html">المزيد</button>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="card-front">
+        <i class="fas fa-handshake fa-3x"></i>
+        <h3>شراكات المجتمع</h3>
+      </div>
+      <div class="card-back">
+        <button class="more-btn" data-link="programs/partners.html">المزيد</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="active-events">
+  <h2>الأحداث النشطة</h2>
+  <div class="events-grid">
+    <!-- بطاقة 1 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero1.jpg" alt="حدث 1">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 1</h3>
+        <p>وصف مختصر للحدث الأول.</p>
+      </div>
+    </div>
+    <!-- بطاقة 2 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero2.jpg" alt="حدث 2">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 2</h3>
+        <p>وصف مختصر للحدث الثاني.</p>
+      </div>
+    </div>
+    <!-- بطاقة 3 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero3.jpg" alt="حدث 3">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 3</h3>
+        <p>وصف مختصر للحدث الثالث.</p>
+      </div>
+    </div>
+    <!-- بطاقة 4 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero4.jpg" alt="حدث 4">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 4</h3>
+        <p>وصف مختصر للحدث الرابع.</p>
+      </div>
+    </div>
+    <!-- بطاقة 5 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero1.jpg" alt="حدث 5">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 5</h3>
+        <p>وصف مختصر للحدث الخامس.</p>
+      </div>
+    </div>
+    <!-- بطاقة 6 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero2.jpg" alt="حدث 6">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 6</h3>
+        <p>وصف مختصر للحدث السادس.</p>
+      </div>
+    </div>
+    <!-- بطاقة 1 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero1.jpg" alt="حدث 1">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 1</h3>
+        <p>وصف مختصر للحدث الأول.</p>
+      </div>
+  </div>
+  <!-- بطاقة 1 -->
+    <div class="event-card">
+      <div class="card-image">
+        <img src="images/hero1.jpg" alt="حدث 1">
+      </div>
+      <div class="card-text">
+        <h3>عنوان الحدث 1</h3>
+        <p>وصف مختصر للحدث الأول.</p>
+      </div>
+  </div>
+    </div>
+</section>
+
+<div class="section media">
+<h2>المركز الإعلامي</h2>
+<div class="dropdown">التقارير
+      <div class="dropdown-content">تقرير 2023، تقييم المشاريع، تقارير المتابعة والتقييم.</div>
+</div>
+<div class="dropdown">فيديو
+      <div class="dropdown-content">فيديوهات من الأنشطة الميدانية والتدريبات.</div>
+</div>
+<div class="dropdown">إصدارات
+      <div class="dropdown-content">دليل المتطوعين، استراتيجيات التنمية المحلية.</div>
+</div>
+</div>
+<section class="stats-section">
+  <h2>إحصائيات المؤسسة</h2>
+  <div class="stats-cards">
+    <div class="stat-card">
+      <div class="stat-number" data-target="131">440</div>
+      <div class="stat-label">الأمن الغذائي</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="222">50</div>
+      <div class="stat-label">التعليم</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="333">234</div>
+      <div class="stat-label">الماوى</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="444">234</div>
+      <div class="stat-label">السلامة والتنمية</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="555">765</div>
+      <div class="stat-label">الحماية</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="666">1000</div>
+      <div class="stat-label">المياه والإصحاح البيئي</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="777">65</div>
+      <div class="stat-label">البيئة والعمل المناخي</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="888">509</div>
+      <div class="stat-label">شركاء المجتمع</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="222">50</div>
+      <div class="stat-label">التعليم</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="222">50</div>
+      <div class="stat-label">التعليم</div>
+    </div>
+  </div>
+</section>
+
+<div class="section partners">
+<h2>شراكات</h2>
+<div class="partners-logos">
+<img alt="Yemen Vision" src="images/nsayemen.jpg.webp"/>
+<img alt="Relief UK" src="images/fpd.jpg.webp"/>
+<img alt="CARE" src="images/care.jpeg.webp"/>
+<img alt="Pure Hands" src="images/Saba.png.webp"/>
+<img alt="Saba Relief" src="images/fpd.jpg.webp"/>
+</div>
+</div>
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  
+  <div class="footer-content">
+    <!-- شعار المؤسسة -->
+    <div class="footer-logo">
+      <img src="images/akrasf.png" alt="شعار المؤسسة">
+    </div>
+    <!-- بيانات الاتصال -->
+    <div class="footer-info">
+      <p><i class="fas fa-map-marker-alt"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
+      <p><i class="fas fa-phone"></i> 00967-775284135</p>
+      <p><i class="fas fa-envelope"></i> info@edoyemen.org</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>© جميع الحقوق محفوظة | المطور: akram alshamiri</p>
+  </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.dropdown').forEach(drop => {
+      drop.addEventListener('click', function () {
+        const content = this.querySelector('.dropdown-content');
+        const isVisible = content.style.display === 'block';
+        document.querySelectorAll('.dropdown-content').forEach(c => c.style.display = 'none');
+        content.style.display = isVisible ? 'none' : 'block';
+      });
+    });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stat-number');
+    const duration = 2000; // مدة العدّ بالميلي ثانية
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const increment = target / (duration / 50); // تحديث كل 50ms
+      let current = 0;
+
+      const updateCount = () => {
+        current += increment;
+        if (current < target) {
+          counter.textContent = Math.ceil(current);
+          setTimeout(updateCount, 50);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      updateCount();
+    });
+  });
+</script>
+
+</body>
+</html>
