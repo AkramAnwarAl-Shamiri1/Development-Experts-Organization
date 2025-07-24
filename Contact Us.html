@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+    <html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>  التواصل  </title>
+  
+ <link rel="stylesheet" href="style.css" />
+ 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/></head>
+<body><div class="top-bar"><a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="social-icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:example@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    
+    <div class="top-bar">
+  
+  <button id="theme-toggle" aria-label="تبديل الوضع">
+    <i class="fas fa-moon"></i>
+  </button>
+</div>
+
+  </div>
+<header>
+
+    <div class="logo-section"><img alt="شعار المؤسسة" class="logo-img" src="images/logo.webp"> </span></div>
+    
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <div class="nav-menu" id="nav-menu">
+        <div class="nav-item"><a href="index.html">الرئيسية</a></div>
+        <div class="nav-item"><a href="About Us.html">من نحن</a></div>
+        <div class="nav-item"><a href="Programs.html">البرامج</a></div>
+        <div class="nav-item"><a href="News.html">الأخبار</a></div>
+         <div class="nav-item"><a href="Contact Us.html">اتصل بنا</a></div>
+      </div>
+    </nav>
+
+      <form class="search-form" onsubmit="return false;">
+        
+      </form>
+    </nav>
+  </header><br>
+   <section>
+   <div class="container">
+    <h2>نموذج التواصل</h2>
+    <form id="contactForm" novalidate>
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" />
+      <div class="field-error"></div>
+
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" />
+      <div class="field-error"></div>
+
+      <label for="subject">الموضوع:</label>
+      <input type="text" id="subject" />
+      <div class="field-error"></div>
+
+      <label for="message">الرسالة:</label>
+      <textarea id="message" rows="6"></textarea>
+      <div class="field-error"></div>
+
+      <div id="errorMsg" class="general-error"></div>
+      <div id="successMsg" class="success-msg"></div>
+
+      <button type="submit">أرسل</button>
+    </form>
+  </div>
+   </section>
+  <section>
+    <h2>يمكنك التواصل معنا عبر  التالي:</h2>
+    <p>لديك استفسار أو تحتاج إلى مساعدة؟ لا تتردد في التواصل معنا عبر المعلومات التالية:</p>
+    <div class="footer-info">
+      <p><i class="fas fa-phone"></i> 00967-775284135</p>
+      <p><i class="fas fa-envelope"></i> <a href="info@edoyemen.org">info@edoyemen.org</a></p>
+     
+      <p><i class="fas fa-envelope"></i> <a href="mailto:akramalshmiri2019@gmail.com">akramalshmiri2019@gmail.com</a></p>
+    </div>
+  </div></section><hr>
+  </section>
+  
+ 
+<section class="map-section">
+  <h2 style="text-align:center; margin-bottom: 10px;">موقع المؤسسة</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.2795942142725!2d44.00318212560667!3d13.579722386794408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c6f001a871697%3A0xf6d69adf27fbb7f6!2z2YXZhti42YXYqSDYrtio2LHYp9ihINmE2YTYqtmG2YXZitip!5e0!3m2!1sar!2s!4v1753225406299!5m2!1sar!2s" 
+    width="100%" 
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+
+    </div>
+  
+
+<footer class="site-footer">
+  
+  <div class="footer-content">
+   
+    <div class="footer-logo">
+      <img src="images/logof.png" alt="شعار المؤسسة">
+    </div>
+   
+    <div class="footer-info">
+      <p><i class="fas fa-map-marker-alt"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
+      <p><i class="fas fa-phone"></i> 00967-775284135</p>
+      <p><i class="fas fa-envelope"></i> info@edoyemen.org</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>© جميع الحقوق محفوظة | المطور: akram alshamiri</p>
+  </div>
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>

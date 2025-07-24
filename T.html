@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>  التبرع  </title>
+  
+ <link rel="stylesheet" href="style.css" />
+ 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/></head>
+<body><div class="top-bar"><a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="social-icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:example@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+     <!-- زر الوضع -->
+    <div class="top-bar">
+  
+  <button id="theme-toggle" aria-label="تبديل الوضع">
+    <i class="fas fa-moon"></i>
+  </button>
+</div>
+
+  </div>
+<header>
+
+    <div class="logo-section"><img alt="شعار المؤسسة" class="logo-img" src="images/logo.webp"> </span></div>
+    
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <div class="nav-menu" id="nav-menu">
+        <div class="nav-item"><a href="index.html">الرئيسية</a></div>
+        <div class="nav-item"><a href="About Us.html">من نحن</a></div>
+        <div class="nav-item"><a href="Programs.html">البرامج</a></div>
+        <div class="nav-item"><a href="News.html">الأخبار</a></div>
+         <div class="nav-item"><a href="Contact Us.html">اتصل بنا</a></div>
+      </div>
+    </nav>
+
+      <form class="search-form" onsubmit="return false;">
+        
+      </form>
+    </nav>
+  </header><br>
+  <section>
+  <div class="container">
+    <h2>نموذج التبرع</h2>
+    <p>يمكنك التبرع لدعم مشاريع المؤسسة من خلال ملء النموذج التالي:</p>
+    <form id="donationForm" novalidate></form>
+      <label for="donorName">الاسم الكامل:</label>
+      <input type="text" id="donorName" />
+      <div class="field-error"></div>
+
+      <label for="donorEmail">البريد الإلكتروني:</label>
+      <input type="email" id="donorEmail" />
+      <div class="field-error"></div>
+
+      <label for="amount">مبلغ التبرع (ريال):</label>
+      <input type="number" id="amount" min="1" />
+      <div class="field-error"></div>
+
+      <label for="paymentMethod">طريقة الدفع:</label>
+      <select id="paymentMethod">
+        <option value="">اختر طريقة الدفع</option>
+        <option value="creditCard">بطاقة ائتمان</option>
+        <option value="paypal">باي بال</option>
+        <option value="bankTransfer">تحويل بنكي</option>
+      </select>
+      <div class="field-error"></div>
+
+      <label for="note">ملاحظات (اختياري):</label>
+      <textarea id="note" rows="3"></textarea>
+      <div class="field-error"></div>
+
+      <div id="errorMsg" class="general-error"></div>
+      <div id="successMsg" class="success-msg"></div>
+
+      <button type="submit">تبرع الآن</button>
+      </form>
+    </div>
+  
+  </section>
+
+  
+
+<footer class="site-footer">
+  
+  <div class="footer-content">
+   
+    <div class="footer-logo">
+      <img src="images/logof.png" alt="شعار المؤسسة">
+    </div>
+ 
+    <div class="footer-info">
+      <p><i class="fas fa-map-marker-alt"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
+      <p><i class="fas fa-phone"></i> 00967-775284135</p>
+      <p><i class="fas fa-envelope"></i> info@edoyemen.org</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>© جميع الحقوق محفوظة | المطور: akram alshamiri</p>
+  </div>
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>
