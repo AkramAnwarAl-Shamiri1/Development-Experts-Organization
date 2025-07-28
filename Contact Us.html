@@ -1,124 +1,133 @@
 <!DOCTYPE html>
-    <html lang="ar" dir="rtl" data-theme="light">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-<meta charset="utf-8"/>
+  <meta charset="utf-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>  التواصل  </title>
+  <title>منظمة خبراء للتنمية</title>
+  <link href="output.css" rel="stylesheet">
   
- <link rel="stylesheet" href="style.css" />
- 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/></head>
-<body><div class="top-bar"><a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="social-icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:example@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-    
-    <div class="top-bar">
-  
-  <button id="theme-toggle" aria-label="تبديل الوضع">
-    <i class="fas fa-moon"></i>
-  </button>
-</div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
 
+  <div class="flex justify-end items-center gap-4 px-5 py-1 bg-[#242856] text-white text-base">
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:info@edoyemen.org" class="hover:text-yellow-400"><i class="fas fa-envelope"></i></a>
+    <button class="ml-4 text-xl hover:text-yellow-400"><i class="fas fa-moon"></i></button>
   </div>
-<header>
 
-    <div class="logo-section"><img alt="شعار المؤسسة" class="logo-img" src="images/logo.webp"> </span></div>
-    
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <header class="flex items-center justify-between px-5 py-3 border-b border-gray-200 sticky top-0 bg-white z-50">
+    <div class="logo-section flex items-center">
+      <img src="logo.webp" alt="شعار المؤسسة" class="h-14" />
+    </div>
     <nav>
-      <div class="nav-menu" id="nav-menu">
-        <div class="nav-item"><a href="index.html">الرئيسية</a></div>
-        <div class="nav-item"><a href="About Us.html">من نحن</a></div>
-        <div class="nav-item"><a href="Programs.html">البرامج</a></div>
-        <div class="nav-item"><a href="News.html">الأخبار</a></div>
-         <div class="nav-item"><a href="Contact Us.html">اتصل بنا</a></div>
+      <div id="nav-menu" class="hidden md:flex space-x-6 font-semibold text-[#242856]">
+        <a href="index.html" class="hover:text-[#002244] transition">الرئيسية</a>
+        <a href="About Us.html" class="hover:text-[#002244] transition">من نحن</a>
+        <a href="Programs.html" class="hover:text-[#002244] transition">البرامج</a>
+        <a href="News.html" class="hover:text-[#002244] transition">الأخبار</a>
+        <a href="Contact Us.html" class="hover:text-[#002244] transition">اتصل بنا</a>
       </div>
+      <div class="md:hidden text-3xl cursor-pointer" onclick="toggleMenu()">☰</div>
     </nav>
 
       <form class="search-form" onsubmit="return false;">
         
       </form>
-    </nav>
-  </header><br>
-   <section>
-   <div class="container">
-    <h2>نموذج التواصل</h2>
-    <form id="contactForm" novalidate>
-      <label for="name">الاسم الكامل:</label>
-      <input type="text" id="name" />
-      <div class="field-error"></div>
-
-      <label for="email">البريد الإلكتروني:</label>
-      <input type="email" id="email" />
-      <div class="field-error"></div>
-
-      <label for="subject">الموضوع:</label>
-      <input type="text" id="subject" />
-      <div class="field-error"></div>
-
-      <label for="message">الرسالة:</label>
-      <textarea id="message" rows="6"></textarea>
-      <div class="field-error"></div>
-
-      <div id="errorMsg" class="general-error"></div>
-      <div id="successMsg" class="success-msg"></div>
-
-      <button type="submit">أرسل</button>
-    </form>
-  </div>
-   </section>
-  <section>
-    <h2>يمكنك التواصل معنا عبر  التالي:</h2>
-    <p>لديك استفسار أو تحتاج إلى مساعدة؟ لا تتردد في التواصل معنا عبر المعلومات التالية:</p>
-    <div class="footer-info">
-      <p><i class="fas fa-phone"></i> 00967-775284135</p>
-      <p><i class="fas fa-envelope"></i> <a href="info@edoyemen.org">info@edoyemen.org</a></p>
-     
-      <p><i class="fas fa-envelope"></i> <a href="mailto:akramalshmiri2019@gmail.com">akramalshmiri2019@gmail.com</a></p>
+  
+  </header>
+  <section class="bg-gray-100 py-12" dir="rtl">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row gap-8">
+    
+    <!-- الجزء الأول: معلومات التواصل -->
+    <div class="md:w-1/2 space-y-4">
+      <h2 class="text-2xl font-bold text-gray-800">يمكنك التواصل معنا عبر التالي:</h2>
+      <p class="text-gray-600">لديك استفسار أو تحتاج إلى مساعدة؟ لا تتردد في التواصل معنا عبر المعلومات التالية:</p>
+      <div class="space-y-2 text-gray-700">
+        <p><i class="fas fa-phone text-yellow-500 ml-2"></i> 00967-775284135</p>
+        <p><i class="fas fa-envelope text-yellow-500 ml-2"></i> <a href="mailto:info@edoyemen.org" class="hover:underline">info@edoyemen.org</a></p>
+        <p><i class="fas fa-envelope text-yellow-500 ml-2"></i> <a href="mailto:akramalshmiri2019@gmail.com" class="hover:underline">akramalshmiri2019@gmail.com</a></p>
+      </div>
     </div>
-  </div></section><hr>
-  </section>
+
+    <!-- الجزء الثاني: نموذج التواصل -->
+    <div class="md:w-1/2 bg-white p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">نموذج التواصل</h2>
+      <form id="contactForm" class="space-y-4" novalidate>
+        <div>
+          <label for="name" class="block text-gray-700">الاسم الكامل:</label>
+          <input type="text" id="name" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring focus:border-yellow-500" />
+          <div class="field-error text-red-500 text-sm"></div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-gray-700">البريد الإلكتروني:</label>
+          <input type="email" id="email" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring focus:border-yellow-500" />
+          <div class="field-error text-red-500 text-sm"></div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-gray-700">الموضوع:</label>
+          <input type="text" id="subject" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring focus:border-yellow-500" />
+          <div class="field-error text-red-500 text-sm"></div>
+        </div>
+
+        <div>
+          <label for="message" class="block text-gray-700">الرسالة:</label>
+          <textarea id="message" rows="6" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring focus:border-yellow-500"></textarea>
+          <div class="field-error text-red-500 text-sm"></div>
+        </div>
+
+        <div id="errorMsg" class="text-red-600 text-sm"></div>
+        <div id="successMsg" class="text-green-600 text-sm"></div>
+
+        <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition">أرسل</button>
+      </form>
+    </div>
+
+  </div>
+</section><hr>
+
+ 
   
  
 <section class="map-section">
-  <h2 style="text-align:center; margin-bottom: 10px;">موقع المؤسسة</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.2795942142725!2d44.00318212560667!3d13.579722386794408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c6f001a871697%3A0xf6d69adf27fbb7f6!2z2YXZhti42YXYqSDYrtio2LHYp9ihINmE2YTYqtmG2YXZitip!5e0!3m2!1sar!2s!4v1753225406299!5m2!1sar!2s" 
-    width="100%" 
-    height="400" 
-    style="border:0;" 
+  <h2 class="text-2xl font-bold text-gray-800 text-center">موقع المؤسسة</h2><br>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.2795942142725!2d44.00318212560667!3d13.579722386794408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c6f001a871697%3A0xf6d69adf27fbb7f6!2z2YXZhti42YXYqSDYrtio2LHYp9ihINmE2YTYqtmG2YXZitip!5e0!3m2!1sar!2s!4v1753225406299!5m2!1sar!2s"
+    width="100%"
+    height="400"
+    style="border:0;"
     allowfullscreen="" 
     loading="lazy" 
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
-</section>
+</section><hr>
 
 
 
     </div>
   
+<footer class="site-footer bg-[#242856] text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between">
+      <div class="footer-logo mb-4 md:mb-0">
+        <img src="logof.PNG" alt="شعار المؤسسة" class="h-14" />
+      </div>
+      <div class="footer-info text-center md:text-right space-y-2">
+        <p><i class="fas fa-map-marker-alt ml-2"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
+        <p><i class="fas fa-phone ml-2"></i> 00967-775284135</p>
+        <p><i class="fas fa-envelope ml-2"></i> info@edoyemen.org</p>
+      </div>
+    </div>
+    <div class="footer-bottom border-t border-yellow-400 mt-6 pt-4 text-center text-sm font-semibold">
+      © جميع الحقوق محفوظة | المطور: akram alshamiri
+    </div>
+  </footer>
 
-<footer class="site-footer">
   
-  <div class="footer-content">
-   
-    <div class="footer-logo">
-      <img src="images/logof.png" alt="شعار المؤسسة">
-    </div>
-   
-    <div class="footer-info">
-      <p><i class="fas fa-map-marker-alt"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
-      <p><i class="fas fa-phone"></i> 00967-775284135</p>
-      <p><i class="fas fa-envelope"></i> info@edoyemen.org</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <hr>
-    <p>© جميع الحقوق محفوظة | المطور: akram alshamiri</p>
-  </div>
-</footer>
-
-
 <script src="main.js"></script>
+
 </body>
 </html>
