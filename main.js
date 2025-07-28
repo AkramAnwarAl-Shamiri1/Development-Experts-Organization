@@ -1,4 +1,22 @@
+ 
+const heroSlider = document.getElementById("hero-slider");
+const heroImages = [
+ "slide.webp",
+  "slide1.webp",
+  "slide12.webp",
 
+];
+
+let heroIndex = 0;
+
+function changeHeroBackground() {
+  heroSlider.style.backgroundImage = `url('${heroImages[heroIndex]}')`;
+  heroIndex = (heroIndex + 1) % heroImages.length;
+}
+
+changeHeroBackground(); 
+setInterval(changeHeroBackground, 5000);
+ 
   function toggleMenu() {
     const menu = document.getElementById('nav-menu');
     menu.classList.toggle('active');
@@ -11,8 +29,59 @@
     });
   });
 
+ 
+    
 
- const toggleBtn = document.getElementById('theme-toggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stat-number");
+
+  const startCounting = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const speed = 200;
+
+    const updateCount = () => {
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (current < target) {
+        counter.innerText = current + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  };
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounting(entry.target);
+        observer.unobserve(entry.target); // مرة وحدة فقط
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+
+  // التأثير البصري عند الظهور
+  const faders = document.querySelectorAll(".fade-in");
+  const faderObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  faders.forEach(fader => faderObserver.observe(fader));
+});
+
+const toggleBtn = document.getElementById('theme-toggle');
   const icon = toggleBtn.querySelector('i');
 
 
@@ -32,66 +101,6 @@
     icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   });
 
-
-  function updateIcon(theme) {
-    const icon = toggleBtn.querySelector("i");
-    if (theme === "dark") {
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-    } else {
-      icon.classList.remove("fa-sun");
-      icon.classList.add("fa-moon");
-    }
- 
-
-
-}
-
-    
- 
-  document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.stat-number');
-    const duration = 2000; 
-
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const increment = target / (duration / 50);
-      let current = 0;
-
-      const updateCount = () => {
-        current += increment;
-        if (current < target) {
-          counter.textContent = Math.ceil(current);
-          setTimeout(updateCount, 50);
-        } else {
-          counter.textContent = target;
-        }
-      };
-
-      updateCount();
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const faders = document.querySelectorAll(".fade-in");
-
-    const options = {
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    faders.forEach(fader => {
-      observer.observe(fader);
-    });
-  });
 
  function handleFormValidation(formId, fieldsConfig, messages) {
   const form = document.getElementById(formId);
@@ -184,5 +193,4 @@ handleFormValidation('contactForm', [
   error: 'يرجى تصحيح الأخطاء في النموذج',
   success: ' تم إرسال النموذج بنجاح!'
 });
-
 

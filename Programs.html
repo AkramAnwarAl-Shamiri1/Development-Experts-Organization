@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-    <html lang="ar" dir="rtl" data-theme="light">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-<meta charset="utf-8"/>
+  <meta charset="utf-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>   البرامج </title>
+  <title>منظمة خبراء للتنمية</title>
+  <link href="output.css" rel="stylesheet">
   
- <link rel="stylesheet" href="style.css" />
- 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/></head>
-<body><div class="top-bar"><a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="social-icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:example@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-    
-    <div class="top-bar">
-  
-  <button id="theme-toggle" aria-label="تبديل الوضع">
-    <i class="fas fa-moon"></i>
-  </button>
-</div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
 
+  <div class="flex justify-end items-center gap-4 px-5 py-1 bg-[#242856] text-white text-base">
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:info@edoyemen.org" class="hover:text-yellow-400"><i class="fas fa-envelope"></i></a>
+    <button class="ml-4 text-xl hover:text-yellow-400"><i class="fas fa-moon"></i></button>
   </div>
-<header>
 
-    <div class="logo-section"><img alt="شعار المؤسسة" class="logo-img" src="images/logo.webp"> </span></div>
-    
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <header class="flex items-center justify-between px-5 py-3 border-b border-gray-200 sticky top-0 bg-white z-50">
+    <div class="logo-section flex items-center">
+      <img src="logo.webp" alt="شعار المؤسسة" class="h-14" />
+    </div>
     <nav>
-      <div class="nav-menu" id="nav-menu">
-        <div class="nav-item"><a href="index.html">الرئيسية</a></div>
-        <div class="nav-item"><a href="About Us.html">من نحن</a></div>
-        <div class="nav-item"><a href="Programs.html">البرامج</a></div>
-        <div class="nav-item"><a href="News.html">الأخبار</a></div>
-         <div class="nav-item"><a href="Contact Us.html">اتصل بنا</a></div>
+      <div id="nav-menu" class="hidden md:flex space-x-6 font-semibold text-[#242856]">
+        <a href="index.html" class="hover:text-[#002244] transition">الرئيسية</a>
+        <a href="About Us.html" class="hover:text-[#002244] transition">من نحن</a>
+        <a href="Programs.html" class="hover:text-[#002244] transition">البرامج</a>
+        <a href="News.html" class="hover:text-[#002244] transition">الأخبار</a>
+        <a href="Contact Us.html" class="hover:text-[#002244] transition">اتصل بنا</a>
       </div>
+      <div class="md:hidden text-3xl cursor-pointer" onclick="toggleMenu()">☰</div>
     </nav>
 
       <form class="search-form" onsubmit="return false;">
@@ -39,121 +38,59 @@
       </form>
     </nav>
   </header>
-<section class="programs-section">
-  <h2>برامج المؤسسة</h2>
-  <div class="programs-grid">
-    
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-apple-alt fa-3x"></i>
-        <h3>الصحة والتغذية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/health.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-book-reader fa-3x"></i>
-        <h3>التعليم</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/education.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-home fa-3x"></i>
-        <h3>الماوى</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/shelter.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-seedling fa-3x"></i>
-        <h3>البيئة والعمل المناخي</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/environment.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-shield-alt fa-3x"></i>
-        <h3>السلامة والتنمية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/safety.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-lock fa-3x"></i>
-        <h3>الحماية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/protection.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-water fa-3x"></i>
-        <h3>المياه والإصحاح</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/water.html">المزيد</button>
-      </div>
-    </div>
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-handshake fa-3x"></i>
-        <h3>شراكات المجتمع</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/partners.html">المزيد</button>
-      </div>
-    </div>
-   
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-apple-alt fa-3x"></i>
-        <h3>الصحة والتغذية</h3>
-      </div>
-       </div>
+  
+<section class="active-events max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-center">برامج المؤسسة</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
       
-    <div class="program-card">
-      <div class="card-front">
-        <i class="fas fa-apple-alt fa-3x"></i>
-        <h3>الصحة والتغذية</h3>
-      </div>
-  </div>
+      <article tabindex="0" role="article" aria-label="برنامج الصحة والتغذية" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-apple-alt fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">الصحة والتغذية</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج الصحة والتغذية" onclick="window.location.href='programs/health.html'">المزيد</button>
+        </div>
+      </article>
+      <article tabindex="0" role="article" aria-label="برنامج التعليم" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-book-reader fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">التعليم</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج التعليم" onclick="window.location.href='programs/education.html'">المزيد</button>
+        </div>
+      </article>
+
+      <article tabindex="0" role="article" aria-label="برنامج المأوى" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-home fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">الماوى</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج المأوى" onclick="window.location.href='programs/shelter.html'">المزيد</button>
+        </div>
+      </article>
 </section>
-
-
-<footer class="site-footer">
-  
-  <div class="footer-content">
-   
-    <div class="footer-logo">
-      <img src="images/logof.png" alt="شعار المؤسسة">
+<footer class="site-footer bg-[#242856] text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between">
+      <div class="footer-logo mb-4 md:mb-0">
+        <img src="logof.PNG" alt="شعار المؤسسة" class="h-14" />
+      </div>
+      <div class="footer-info text-center md:text-right space-y-2">
+        <p><i class="fas fa-map-marker-alt ml-2"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
+        <p><i class="fas fa-phone ml-2"></i> 00967-775284135</p>
+        <p><i class="fas fa-envelope ml-2"></i> info@edoyemen.org</p>
+      </div>
     </div>
-  
-    <div class="footer-info">
-      <p><i class="fas fa-map-marker-alt"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
-      <p><i class="fas fa-phone"></i> 00967-775284135</p>
-      <p><i class="fas fa-envelope"></i> info@edoyemen.org</p>
+    <div class="footer-bottom border-t border-yellow-400 mt-6 pt-4 text-center text-sm font-semibold">
+      © جميع الحقوق محفوظة | المطور: akram alshamiri
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <hr>
-    <p>© جميع الحقوق محفوظة | المطور: akram alshamiri</p>
-  </div>
-</footer>
-
-
+  
 <script src="main.js"></script>
+
 </body>
 </html>
