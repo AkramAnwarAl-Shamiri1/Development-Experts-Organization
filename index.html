@@ -1,367 +1,340 @@
 <!DOCTYPE html>
-    <html lang="ar" dir="rtl" data-theme="light">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-<meta charset="utf-8"/>
+  <meta charset="utf-8" />
 
-
-<title> منظمة خبراء للتنمية </title>
-
-  <link rel="stylesheet" href="Inline.css" />
-
- <link rel="stylesheet" href="style.css" />
- 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/></head>
-<body><div class="top-bar"><a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="social-icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:akramalshmiri2019@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-    
-    <div class="top-bar">
+  <title>منظمة خبراء للتنمية</title>
+  <link href="output.css" rel="stylesheet">
   
-  <button id="theme-toggle" aria-label="تبديل الوضع">
-    <i class="fas fa-moon"></i>
-  </button>
-</div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
 
+  <div class="flex justify-end items-center gap-4 px-5 py-1 bg-[#242856] text-white text-base">
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:info@edoyemen.org" class="hover:text-yellow-400"><i class="fas fa-envelope"></i></a>
+    <button class="ml-4 text-xl hover:text-yellow-400"><i class="fas fa-moon"></i></button>
   </div>
-<header>
 
-    <div class="logo-section"><img alt="شعار المؤسسة" class="logo-img" src="images/logo.webp"> </span></div>
-    
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <header class="flex items-center justify-between px-5 py-3 border-b border-gray-200 sticky top-0 bg-white z-50">
+    <div class="logo-section flex items-center">
+      <img src="logo.webp" alt="شعار المؤسسة" class="h-14" />
+    </div>
     <nav>
-      <div class="nav-menu" id="nav-menu">
-        <div class="nav-item"><a href="index.html">الرئيسية</a></div>
-        <div class="nav-item"><a href="About Us.html">من نحن</a></div>
-        <div class="nav-item"><a href="Programs.html">البرامج</a></div>
-        <div class="nav-item"><a href="News.html">الأخبار</a></div>
-         <div class="nav-item"><a href="Contact Us.html">اتصل بنا</a></div>
+      <div id="nav-menu" class="hidden md:flex space-x-6 font-semibold text-[#242856]">
+        <a href="index.html" class="hover:text-[#002244] transition">الرئيسية</a>
+        <a href="About Us.html" class="hover:text-[#002244] transition">من نحن</a>
+        <a href="Programs.html" class="hover:text-[#002244] transition">البرامج</a>
+        <a href="News.html" class="hover:text-[#002244] transition">الأخبار</a>
+        <a href="Contact Us.html" class="hover:text-[#002244] transition">اتصل بنا</a>
       </div>
+      <div class="md:hidden text-3xl cursor-pointer" onclick="toggleMenu()">☰</div>
     </nav>
-     
-     
-        <a href="T.html" class="btn-cta">تبرع الآن</a>
-      
-    
+    <a href="T.html" class="bg-[#242856] hover:bg-yellow-400 text-white px-8 py-2 rounded-full font-bold shadow-md transition-colors duration-300">
+      تبرع الآن
+    </a>
   </header>
+<br>
 
-<section class="hero-slider">
-  <div class="hero-slide" style="background-image: url('images/hero1.jpg')">
-    <div class="slide-content">
-      <h1>تمكين الشباب</h1>
-      <p>مع منظمة حبراء للتنمية نحو غد أفضل</p>
-    </div>
-  </div>
-  <div class="hero-slide" style="background-image: url('images/hero2.jpg')">
-    <div class="slide-content">
-      <h1>التعليم للجميع</h1>
-      <p>نؤمن بأنه حق أساسي لكل طفل</p>
-    </div>
-  </div>
-  <div class="hero-slide" style="background-image: url('images/hero3.jpg')">
-    <div class="slide-content">
-      <h1>رعاية صحية أفضل</h1>
-      <p>نبني مستقبل صحي وآمن</p>
-    </div>
-  </div>
-  <div class="hero-slide" style="background-image: url('images/hero4.jpg')">
-    <div class="slide-content">
-      <h1>حماية البيئة</h1>
-      <p>معًا لنحافظ على كوكبنا</p>
-    </div>
-  </div>
-</section>
-<section>
-
-<div class="section fade-in">
-    <h2 class="organization-description">منظمة يمنية مستقلة ،غير حكومية وغير ربحية NGO# مسجلة من وزارة الشئون الاجتماعية والعمل برقم(٩٨-م-٢٠١٥)تعمل في مجال التنموي والإنساني والمجتمعي</h2>
-<div class="dropdown">الرؤية
-      <div class="dropdown-content">تحقيق تنمية مستدامة وشاملة في اليمن من خلال تمكين المجتمعات.</div>
-</div>
-<div class="dropdown">الرسالة
-      <div class="dropdown-content">المساهمة في التنمية الاجتماعية والاقتصادية عبر مشاريع إنسانية وتدريبية.</div>
-</div>
-<div class="dropdown">القيم والمبادئ
-      <div class="dropdown-content">الشفافية، المشاركة، الاستدامة، الكفاءة، احترام الإنسان.</div>
-</div>
-<div class="dropdown">الأهداف
-      <div class="dropdown-content">تقديم الدعم للفئات الأكثر ضعفاً، تعزيز التعليم، تمكين المرأة والشباب.</div>
-</div>
-</div>
-
-<section class="programs-section fade-in">
-  <h2>برامج المؤسسة</h2>
-  <div class="programs-grid">
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج الصحة والتغذية">
-      <div class="card-front">
-        <i class="fas fa-apple-alt fa-3x"></i>
-        <h3>الصحة والتغذية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/health.html" aria-label="عرض المزيد عن برنامج الصحة والتغذية">المزيد</button>
-      </div>
-    </article>
-
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج التعليم">
-      <div class="card-front">
-        <i class="fas fa-book-reader fa-3x"></i>
-        <h3>التعليم</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/education.html" aria-label="عرض المزيد عن برنامج التعليم">المزيد</button>
-      </div>
-    </article>
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج المأوى">
-      <div class="card-front">
-        <i class="fas fa-home fa-3x"></i>
-        <h3>الماوى</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/shelter.html" aria-label="عرض المزيد عن برنامج المأوى">المزيد</button>
-      </div>
-    </article>
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج المياه والإصحاح">
-      <div class="card-front">
-        <i class="fas fa-water fa-3x"></i>
-        <h3>المياه والإصحاح</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/environment.html" aria-label="عرض المزيد عن برنامج المياه والإصحاح">المزيد</button>
-      </div>
-    </article>
-    <article class="program-card" role="article" tabindex="0" aria-label=" برنامج السلامة والتنمية">
-      <div class="card-front">
-        <i class="fas fa-shield-alt fa-3x"></i>
-        <h3>السلامة والتنمية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/safety.html" aria-label="عرض المزيد عن برنامج السلامة والتنمية">المزيد</button>
-      </div>
-    </article>
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج الحماية">
-      <div class="card-front">
-        <i class="fas fa-lock fa-3x"></i>
-        <h3>الحماية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/protection.html" aria-label="عرض المزيد عن برنامج الحماية">المزيد</button>
-      </div>
-    </article>
-    <article class="program-card" role="article" tabindex="0" aria-label=" برنامج المياه والإصحاح">
-      <div class="card-front">
-        <i class="fas fa-water fa-3x"></i>
-        <h3>المياه والإصحاح</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/water.html" aria-label="عرض المزيد عن برنامج المياه والإصحاح">المزيد</button>
-      </div>
-    </article>
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج شراكات المجتمع">
-      <div class="card-front">
-        <i class="fas fa-handshake fa-3x"></i>
-        <h3>شراكات المجتمع</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/partners.html" aria-label="عرض المزيد عن برنامج شراكات المجتمع">المزيد</button>
-      </div>
-    </article>
-
-   <article class="program-card" role="article" tabindex="0" aria-label="برنامج الصحة والتغذية">
-  <div class="card-front">
-    <i class="fas fa-apple-alt fa-3x"></i>
-    <h3>الصحة والتغذية</h3>
-  </div>
-  <div class="card-back">
-    <button class="more-btn" data-link="programs/partners.html" aria-label="عرض المزيد عن برنامج الصحة والتغذية">المزيد</button>
-  </div>
-</article>
-
-    <article class="program-card" role="article" tabindex="0" aria-label="برنامج الصحة والتغذية">
-      <div class="card-front">
-        <i class="fas fa-apple-alt fa-3x"></i>
-        <h3>الصحة والتغذية</h3>
-      </div>
-      <div class="card-back">
-        <button class="more-btn" data-link="programs/partners.html" aria-label="عرض المزيد عن برنامج الصحة والتغذية">المزيد</button>
-      </div>
-    </article>
-
-</section>
-
-<section class="active-events fade-in">
-  <h2>الأحداث النشطة</h2>
-  <div class="events-grid">
-   
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero1.jpg" alt="حدث 1">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 1</h3>
-        <p>وصف مختصر للحدث الأول.</p>
-      </div>
-    </div>
-   
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero2.jpg" alt="حدث 2">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 2</h3>
-        <p>وصف مختصر للحدث الثاني.</p>
-      </div>
-    </div>
-    
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero3.jpg" alt="حدث 3">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 3</h3>
-        <p>وصف مختصر للحدث الثالث.</p>
-      </div>
-    </div>
-   
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero4.jpg" alt="حدث 4">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 4</h3>
-        <p>وصف مختصر للحدث الرابع.</p>
-      </div>
-    </div>
-   
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero1.jpg" alt="حدث 5">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 5</h3>
-        <p>وصف مختصر للحدث الخامس.</p>
-      </div>
-    </div>
-   
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero2.jpg" alt="حدث 6">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 6</h3>
-        <p>وصف مختصر للحدث السادس.</p>
-      </div>
-    </div>
-    
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero1.jpg" alt="حدث 1">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 1</h3>
-        <p>وصف مختصر للحدث الأول.</p>
-      </div>
-  </div>
+<section class=" relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden">
  
-    <div class="event-card">
-      <div class="card-image">
-        <img src="images/hero1.jpg" alt="حدث 1">
-      </div>
-      <div class="card-text">
-        <h3>عنوان الحدث 1</h3>
-        <p>وصف مختصر للحدث الأول.</p>
-      </div>
-  </div>
-    </div>
-</section>
+  <div id="hero-slider" class="absolute inset-0 z-0 bg-cover bg-center transition-all duration-1000"></div>
 
-<div class="section-media fade-in">
-<h2>المركز الإعلامي</h2>
-<div class="dropdown">التقارير
-      <div class="dropdown-content">تقرير 2023، تقييم المشاريع، تقارير المتابعة والتقييم.</div>
-</div>
-<div class="dropdown">فيديو
-      <div class="dropdown-content">فيديوهات من الأنشطة الميدانية والتدريبات.</div>
-</div>
-<div class="dropdown">إصدارات
-      <div class="dropdown-content">دليل المتطوعين، استراتيجيات التنمية المحلية.</div>
-</div>
-</div>
-<section class="stats-section fade-in">
-  <h2>إحصائيات المؤسسة</h2>
-  <div class="stats-cards">
-    <div class="stat-card">
-      <div class="stat-number" data-target="131">440</div>
-      <div class="stat-label">الأمن الغذائي</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="222">50</div>
-      <div class="stat-label">التعليم</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="333">234</div>
-      <div class="stat-label">الماوى</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="444">234</div>
-      <div class="stat-label">السلامة والتنمية</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="555">765</div>
-      <div class="stat-label">الحماية</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="666">1000</div>
-      <div class="stat-label">المياه والإصحاح البيئي</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="777">65</div>
-      <div class="stat-label">البيئة والعمل المناخي</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="888">509</div>
-      <div class="stat-label">شركاء المجتمع</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="222">50</div>
-      <div class="stat-label">التعليم</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number" data-target="222">50</div>
-      <div class="stat-label">التعليم</div>
-    </div>
-  </div>
-</section>
 
-<div class="section-partners fade-in">
-<h2>شراكات</h2>
-<div class="partners-logos">
-<img alt="Yemen Vision" src="images/nsayemen.jpg.webp"/>
-<img alt="Relief UK" src="images/fpd.jpg.webp"/>
-<img alt="CARE" src="images/care.jpeg.webp"/>
-<img alt="Pure Hands" src="images/Saba.png.webp"/>
-<img alt="Saba Relief" src="images/fpd.jpg.webp"/>
-</div>
-</div>
+    <div class="relative z-10 bg-black/60 p-8 rounded-lg max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">التعليم للجميع </h1>
+    <p class="text-lg md:text-xl text-gray-200 mb-6">نؤمن بأنه حق أساسي لكل طفل</p>
 
-<footer class="site-footer">
+    </div>
   
-  <div class="footer-content">
-   
-    <div class="footer-logo">
-      <img src="images/logof.png" alt="شعار المؤسسة">
+  </section>
+
+
+  <section class="max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-xl md:text-2xl font-bold mb-5">منظمة يمنية مستقلة، غير حكومية وغير ربحية NGO# مسجلة من وزارة الشئون الاجتماعية والعمل برقم(٩٨-م-٢٠١٥) تعمل في المجال التنموي والإنساني والمجتمعي</h2>
+
+    <div class="grid md:grid-cols-4 gap-5">
+      <details class="bg-gray-50 border border-gray-200 rounded p-4 cursor-pointer" open>
+        <summary class="font-semibold text-lg cursor-pointer">الرؤية</summary>
+        <p class="mt-2 text-gray-700">تحقيق تنمية مستدامة وشاملة في اليمن من خلال تمكين المجتمعات.</p>
+      </details>
+      <details class="bg-gray-50 border border-gray-200 rounded p-4 cursor-pointer">
+        <summary class="font-semibold text-lg cursor-pointer">الرسالة</summary>
+        <p class="mt-2 text-gray-700">المساهمة في التنمية الاجتماعية والاقتصادية عبر مشاريع إنسانية وتدريبية.</p>
+      </details>
+      <details class="bg-gray-50 border border-gray-200 rounded p-4 cursor-pointer">
+        <summary class="font-semibold text-lg cursor-pointer">القيم والمبادئ</summary>
+        <p class="mt-2 text-gray-700">الشفافية، المشاركة، الاستدامة، الكفاءة، احترام الإنسان.</p>
+      </details>
+      <details class="bg-gray-50 border border-gray-200 rounded p-4 cursor-pointer">
+        <summary class="font-semibold text-lg cursor-pointer">الأهداف</summary>
+        <p class="mt-2 text-gray-700">تقديم الدعم للفئات الأكثر ضعفاً، تعزيز التعليم، تمكين المرأة والشباب.</p>
+      </details>
     </div>
-   
-    <div class="footer-info">
-      <p><i class="fas fa-map-marker-alt"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
-      <p><i class="fas fa-phone"></i> 00967-775284135</p>
-      <p><i class="fas fa-envelope"></i> info@edoyemen.org</p>
+  </section>
+
+  
+<section class="active-events max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-center">برامج المؤسسة</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      
+      <article tabindex="0" role="article" aria-label="برنامج الصحة والتغذية" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-apple-alt fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">الصحة والتغذية</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج الصحة والتغذية" onclick="window.location.href='programs/health.html'">المزيد</button>
+        </div>
+      </article>
+      <article tabindex="0" role="article" aria-label="برنامج التعليم" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-book-reader fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">التعليم</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج التعليم" onclick="window.location.href='programs/education.html'">المزيد</button>
+        </div>
+      </article>
+
+      <article tabindex="0" role="article" aria-label="برنامج المأوى" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-home fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">الماوى</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج المأوى" onclick="window.location.href='programs/shelter.html'">المزيد</button>
+        </div>
+      </article>
+
+      <article tabindex="0" role="article" aria-label="برنامج المياه والإصحاح" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-water fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">المياه والإصحاح</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج المياه والإصحاح" onclick="window.location.href='programs/environment.html'">المزيد</button>
+        </div>
+      </article>
+
+      <article tabindex="0" role="article" aria-label="برنامج السلامة والتنمية" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-shield-alt fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">السلامة والتنمية</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج السلامة والتنمية" onclick="window.location.href='programs/safety.html'">المزيد</button>
+        </div>
+      </article>
+
+      <article tabindex="0" role="article" aria-label="برنامج الحماية" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-lock fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">الحماية</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج الحماية" onclick="window.location.href='programs/protection.html'">المزيد</button>
+        </div>
+      </article>
+      <article tabindex="0" role="article" aria-label="برنامج الحماية" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-lock fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">الحماية</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج الحماية" onclick="window.location.href='programs/protection.html'">المزيد</button>
+        </div>
+      </article>
+
+      <article tabindex="0" role="article" aria-label="برنامج شراكات المجتمع" class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        <div class="card-front p-6 text-center">
+          <i class="fas fa-handshake fa-3x text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold">شراكات المجتمع</h3>
+        </div>
+        <div class="card-back absolute inset-0 bg-[#242856] bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+          <button class="more-btn bg-yellow-400 text-[#242856] font-bold px-6 py-2 rounded shadow hover:bg-yellow-300" aria-label="عرض المزيد عن برنامج شراكات المجتمع" onclick="window.location.href='programs/partners.html'">المزيد</button>
+        </div>
+      </article>
+
     </div>
-  </div>
+  </section>
 
-  <div class="footer-bottom">
-    <hr>
-    <p>© جميع الحقوق محفوظة | المطور: akram alshamiri</p>
-  </div>
-</footer>
+ 
+  <section class="active-events max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-center">الأحداث النشطة</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="hero1.jpg" alt="حدث 1" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 1</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الأول.</p>
+        </div>
+      </div>
+
+      <div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="hero1.jpg" alt="حدث 2" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 2</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الثاني.</p>
+        </div>
+      </div>
+
+      <div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="hero2.jpg" alt="حدث 3" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 3</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الثالث.</p>
+        </div>
+      </div>
+
+      <div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="hero4.jpg" alt="حدث 4" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 4</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الرابع.</p>
+        </div>
+      </div>
+<div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="hero4.jpg" alt="حدث 4" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 4</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الرابع.</p>
+        </div>
+      </div>
+<div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="slide.webp" alt="حدث 4" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 4</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الرابع.</p>
+        </div>
+      </div>
+<div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="slide1.webp" alt="حدث 4" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 4</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الرابع.</p>
+        </div>
+      </div>
+<div class="event-card bg-white rounded shadow hover:shadow-lg overflow-hidden cursor-pointer focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400" tabindex="0">
+        <img src="slide12.webp" alt="حدث 4" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">عنوان الحدث 4</h3>
+          <p class="text-gray-700 text-sm">وصف مختصر للحدث الرابع.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
+  <section class="section-media max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-2xl font-bold mb-6 text-center">المركز الإعلامي</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <details class="bg-gray-50 border border-gray-200 rounded p-5 cursor-pointer" open>
+        <summary class="font-semibold text-lg cursor-pointer">التقارير</summary>
+        <p class="mt-3 text-gray-700">تقرير 2023، تقييم المشاريع، تقارير المتابعة والتقييم.</p>
+      </details>
+
+      <details class="bg-gray-50 border border-gray-200 rounded p-5 cursor-pointer">
+        <summary class="font-semibold text-lg cursor-pointer">فيديو</summary>
+        <p class="mt-3 text-gray-700">فيديوهات من الأنشطة الميدانية والتدريبات.</p>
+      </details>
+
+      <details class="bg-gray-50 border border-gray-200 rounded p-5 cursor-pointer">
+        <summary class="font-semibold text-lg cursor-pointer">إصدارات</summary>
+        <p class="mt-3 text-gray-700">دليل المتطوعين، استراتيجيات التنمية المحلية.</p>
+      </details>
+
+    </div>
+  </section>
+  <section class="stats-section  max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-center">إحصائيات المؤسسة</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+
+      <div class="stat-card bg-white  hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="440">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الأمن الغذائي</div>
+      </div>
+
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="50">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">التعليم</div>
+      </div>
+
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="234">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الماوى</div>
+      </div>
+
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="234">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">السلامة والتنمية</div>
+      </div>
+
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="765">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الحماية</div>
+      </div>
+
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="765">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الحماية</div>
+      </div>
+      
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="765">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الحماية</div>
+      </div>
+      
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="765">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الحماية</div>
+      </div>
+      
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="765">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الحماية</div>
+      </div>
+      
+      <div class="stat-card bg-white hover:shadow-lg  rounded-lg shadow p-5 text-center">
+        <div class="stat-number text-3xl font-bold text-yellow-400" data-target="765">0</div>
+        <div class="stat-label mt-2 text-gray-700 font-semibold">الحماية</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-partners max-w-6xl mx-auto px-5 py-10 fade-in">
+    <h2 class="text-2xl font-bold mb-6 text-center">شراكات</h2>
+    <div class="partners-logos flex flex-wrap justify-center gap-10">
+      <img alt="Yemen Vision" src="care.webp" class="h-16 object-contain" />
+      <img alt="Relief UK" src="fpd.webp" class="h-16 object-contain" />
+      <img alt="CARE" src="nsayemen.webp" class="h-16 object-contain" />
+      <img alt="Pure Hands" src="akrasf.png" class="h-16 object-contain" />
+      <img alt="Saba Relief" src="Saba.webp" class="h-16 object-contain" />
+    </div>
+  </section>
+  <footer class="site-footer bg-[#242856] text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between">
+      <div class="footer-logo mb-4 md:mb-0">
+        <img src="logof.PNG" alt="شعار المؤسسة" class="h-14" />
+      </div>
+      <div class="footer-info text-center md:text-right space-y-2">
+        <p><i class="fas fa-map-marker-alt ml-2"></i> اليمن - تعز - شارع وادي القاضي - جوار فندق جراند تعز</p>
+        <p><i class="fas fa-phone ml-2"></i> 00967-775284135</p>
+        <p><i class="fas fa-envelope ml-2"></i> info@edoyemen.org</p>
+      </div>
+    </div>
+    <div class="footer-bottom border-t border-yellow-400 mt-6 pt-4 text-center text-sm font-semibold">
+      © جميع الحقوق محفوظة | المطور: akram alshamiri
+    </div>
+  </footer>
+
+  
 <script src="main.js"></script>
+
 </body>
 </html>
