@@ -1,10 +1,8 @@
- 
 const heroSlider = document.getElementById("hero-slider");
 const heroImages = [
- "slide.webp",
+  "slide.webp",
   "slide1.webp",
   "slide12.webp",
-
 ];
 
 let heroIndex = 0;
@@ -16,21 +14,17 @@ function changeHeroBackground() {
 
 changeHeroBackground(); 
 setInterval(changeHeroBackground, 5000);
- 
-  function toggleMenu() {
-    const menu = document.getElementById('nav-menu');
-    menu.classList.toggle('active');
-  }
 
- 
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.remove('active');
-    });
+function toggleMenu() {
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('active');
+}
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.remove('active');
   });
-
- 
-    
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".stat-number");
@@ -79,30 +73,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   faders.forEach(fader => faderObserver.observe(fader));
+
+  // ✅ قائمة الجوال المنسدلة
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuToggle && mobileMenu) {
+    const links = mobileMenu.querySelectorAll("a");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  }
 });
 
+// ✅ الثيم الداكن / الفاتح
 const toggleBtn = document.getElementById('theme-toggle');
-  const icon = toggleBtn.querySelector('i');
+const icon = toggleBtn.querySelector('i');
 
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-  }
+toggleBtn.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+});
 
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-
-    icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-  });
-
-
- function handleFormValidation(formId, fieldsConfig, messages) {
+// ✅ التحقق من النماذج
+function handleFormValidation(formId, fieldsConfig, messages) {
   const form = document.getElementById(formId);
   if (!form) return;
 
@@ -157,7 +167,6 @@ const toggleBtn = document.getElementById('theme-toggle');
     fieldsConfig.forEach(field => {
       if (!validateField(field)) hasError = true;
     });
-    
 
     if (hasError) {
       if (errorMsg) errorMsg.textContent = messages.error;
@@ -183,7 +192,6 @@ handleFormValidation('donationForm', [
   success: ' تم إرسال التبرع بنجاح!'
 });
 
-
 handleFormValidation('contactForm', [
   { id: 'name', msgEmpty: 'يرجى إدخال الاسم الكامل' },
   { id: 'email', msgEmpty: 'يرجى إدخال البريد الإلكتروني', msgInvalid: 'يرجى إدخال بريد إلكتروني صالح' },
@@ -193,4 +201,3 @@ handleFormValidation('contactForm', [
   error: 'يرجى تصحيح الأخطاء في النموذج',
   success: ' تم إرسال النموذج بنجاح!'
 });
-
